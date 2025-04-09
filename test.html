@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LetMeKnow Plugin Demo</title>
+  <!--
+    Load the LetMeKnow plugin script early in the document.
+    The data-url attribute should point to your backend endpoint.
+  -->
+  <script src="letmeknow.js" data-url="http://localhost:3000/api/letmeknow/"></script>
+
+  <!--
+    The following script immediately triggers a JavaScript error
+    (by calling an undefined function) so that the plugin's error handler
+    captures and sends it to your backend.
+  -->
+  <script>
+    // This call will throw a ReferenceError
+    undefinedFunctionCall();
+  </script>
+</head>
+<body>
+  <h1>LetMeKnow Plugin Demo</h1>
+  <p>This page deliberately causes errors to test the LetMeKnow plugin.</p>
+
+  <!--
+    An example of a broken resource to simulate load errors.
+    Note: Resource load errors (like images) may not be caught by window.onerror in all browsers.
+  -->
+  <img src="non-existent-image.jpg" alt="Broken Image">
+
+  <!--
+    Additional manual logging via the global letmeknowLog function.
+    You can call this anywhere in your code to send custom log data.
+  -->
+  <script>
+    window.letmeknowLog({
+      type: 'custom',
+      message: 'This is a manual test log.'
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+    "type": "error",
+    "message": "ReferenceError: undefinedFunctionCall is not defined",
+    "source": "http://example.com/demo.html",
+    "lineno": 15,
+    "colno": 2,
+    "error": "undefinedFunctionCall is not defined",
+    "timestamp": 1690000000000,
+    "pageURL": "http://example.com/demo.html",
+    "sessionID": "letmeknowsessionid-5f4dcc3b5aa765d61d8327deb882cf99",
+    "browser": {
+      "sessionID": "letmeknowsessionid-5f4dcc3b5aa765d61d8327deb882cf99",
+      "OS": "Windows",
+      "Browser": "Chrome 93",
+      "Language": "en-US"
+    }
+  }
+  
